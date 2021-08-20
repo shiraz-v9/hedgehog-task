@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+:root {
+  --buttonColor: #378ad3;
+  --fontColor: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: url("/src/media/huum-K65M3GbRYq8-unsplash.jpg");
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  /* justify-content: center; */
   align-items: center;
+  /* padding: 10px; */
+  background-color: #5fbfff;
+  border-radius: 20px;
+  opacity: 0.9;
+  /* flex-wrap: wrap; */
+}
+
+.colflexBox {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+}
+
+h1,
+h2,
+h3,
+a,
+label,
+.btns,
+p,
+td,
+th {
+  color: var(--fontColor);
+}
+a:hover {
+  color: red;
+}
+
+.allMargin {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  width: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btns {
+  background-color: var(--buttonColor);
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.xsbtns {
+  background-color: var(--buttonColor);
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.resample {
+  margin-bottom: 10px;
+}
+
+.resizeImage {
+  height: 70px;
+  width: 70px;
+  border-radius: 20px;
+}
+td,
+tr {
+  text-align: left;
+  font-weight: bold;
+  color: #fff1f1;
+}
+
+.userTbl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+input {
+  width: 200px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.theModal {
+  background-color: #5fbfff;
+  border-radius: 10px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+  width: 100%;
+  /* padding: 20px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+}
+
+.modalSpan {
+  display: "flex";
+  flex-direction: "row";
+  align-items: "baseline";
+  flex-wrap: nowrap;
+  justify-content: "flex-start";
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-image: none;
+    background-color: #2d2d2d;
   }
-  to {
-    transform: rotate(360deg);
+  .allMargin {
+    width: 100%;
+    overflow: hidden;
+
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* margin: auto; */
+    /* width: 50%; */
+  }
+  .navbar {
+    margin-top: 0px;
+    /* margin-right: 0px;
+    margin-left: 0px; */
+  }
+  .modalSpan {
+    display: "flex";
+    flex-direction: "column";
+    align-items: "center";
+    justify-content: "space-between";
+  }
+  form {
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+  }
+  .resizeImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+  }
+  .theModal {
+    margin-bottom: 10px;
+    width: 85%;
+    padding: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .userTbl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    overflow-x: auto;
+  }
+  .colflexBox {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
